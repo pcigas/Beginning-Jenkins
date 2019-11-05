@@ -4,7 +4,6 @@ node {
     dir('./') {
         stage("Install Requirements") {
             sh 'apk add make python'
-            sh 'easy_install pip'
             sh 'pip install virtualenv'
             sh 'make install'
         }
