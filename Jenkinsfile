@@ -8,6 +8,7 @@ node {
     dir('./') {
         stage("Install Requirements") {
             sh 'make install'
+            sh 'apt-get install --reinstall make'
         }
 
         stage("Run Tests") {
