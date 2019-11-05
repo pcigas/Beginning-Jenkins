@@ -1,14 +1,11 @@
-node {
+pipeline {
+    agent any
     printMessage("Pipeline Start")
-
-    stage("Fetch Source Code") {
-        git "https://github.com/pcigas/Beginning-Jenkins"
-    }
 
     dir('./') {
         stage("Install Requirements") {
+            sh 'apk add make'
             sh 'make install'
-            sh 'apt-get install --reinstall make'
         }
 
         stage("Run Tests") {
