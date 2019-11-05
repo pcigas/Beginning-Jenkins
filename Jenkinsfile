@@ -2,10 +2,10 @@ node {
     printMessage("Pipeline Start")
 
     stage("Fetch Source Code") {
-        git "https://github.com/pcigas/ActivityA"
+        git "https://github.com/pcigas/Beginning-Jenkins"
     }
 
-    dir('Lesson5/ActivityA') {
+    dir('./') {
         stage("Install Requirements") {
             sh 'make install'
         }
