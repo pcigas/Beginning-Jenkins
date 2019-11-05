@@ -6,8 +6,6 @@ node {
             sh 'apk add make python py-pip'
             sh 'pip install virtualenv'
             sh 'make install'
-            sh 'find testing'
-            sh 'find / -name "nosetests"'
         }
 
         stage("Run Tests") {
