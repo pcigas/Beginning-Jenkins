@@ -1,7 +1,7 @@
 node {
     printMessage("Pipeline Start")
 
-    dir('./') {
+    dir('.') {
         stage("Install Requirements") {
             sh 'apk add make python py-pip'
             sh 'pip install virtualenv'
