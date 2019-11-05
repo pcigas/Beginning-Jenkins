@@ -4,4 +4,4 @@ install:
 	pip install --user -r requirements.txt
 
 jenkins_test:
-	lab/testing/bin/nosetests app/ -v
+	testing/bin/nosetests app/ -v
