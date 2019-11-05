@@ -7,7 +7,6 @@ node {
             sh 'pip install virtualenv'
             sh 'make install'
             sh 'find testing'
-            sh 'which nosetests'
             sh 'find / -name "nosetests"'
         }
 
